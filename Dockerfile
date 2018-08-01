@@ -5,15 +5,15 @@ MAINTAINER simon@divby0.io
 ENV ES_TMPDIR="/tmp"
 ENV NODE_NAME="test"
 
-ADD config/elasticsearch.yml /elasticsearch/config/elasticsearch.yml
-ADD install_search_guard.exp /install_search_guard.exp
-
 RUN apk add --update expect
+ADD install_search_guard.exp /install_search_guard.exp
 RUN chmod +x /install_search_guard.exp
 
 WORKDIR /elasticsearch
 
 RUN bin/elasticsearch-plugin install -b com.floragunn:search-guard-6:6.3.1-22.3
+
+ADD config/elasticsearch.yml config/elasticsearch.yml
 
 # make the script run in alpine
 RUN grep -rl quiet plugins/search-guard-6/tools/install_demo_configuration.sh | xargs sed -i 's/--quiet/-q/g'
