@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+spawn /elasticsearch/plugins/search-guard-6/tools/install_demo_configuration.sh
+
+expect "Install demo certificates?"
+
+send -- "y\r"
+
+expect "Initialize Search Guard?"
+
+send -- "y\r"
+
+expect "Enable cluster mode?"
+
+send -- "y\r"
+
+expect eof
