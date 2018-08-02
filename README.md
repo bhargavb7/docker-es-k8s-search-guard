@@ -3,6 +3,14 @@ adding search guard to docker-elasticsearch-kubernetes image
 
 # instruction
 
+1. Generate certificates and keys:
+
+```shell
+./search-guard-tlstool-1.5/tools/sgtlstool.sh -c ./config/tlsconfig.yml -ca -crt
+```
+
+2. build docker image:
+
 ```shell
 docker build -t docker-es-k8s-search-guard:latest .
 docker run docker run -p 9200:9200 docker-es-k8s-search-guard:latest

@@ -1,12 +1,12 @@
-# cluster:
-#   name: ${CLUSTER_NAME}
+cluster:
+  name: ${CLUSTER_NAME}
 
 node:
   master: ${NODE_MASTER}
   data: ${NODE_DATA}
   name: ${NODE_NAME}
   ingest: ${NODE_INGEST}
-  # max_local_storage_nodes: ${MAX_LOCAL_STORAGE_NODES}
+  max_local_storage_nodes: ${MAX_LOCAL_STORAGE_NODES}
 
 processors: ${PROCESSORS:1}
 
@@ -30,6 +30,19 @@ http:
 discovery:
   zen:
     ping.unicast.hosts: ${DISCOVERY_SERVICE}
-    # minimum_master_nodes: ${NUMBER_OF_MASTERS}
+    minimum_master_nodes: ${NUMBER_OF_MASTERS}
 
-xpack.ml.enabled: false
+xpack:
+  ml.enabled: false
+  security.enabled: false
+
+searchguard.ssl.transport.pemkey_filepath: node.key
+searchguard.ssl.transport.pemkey_password: gLOupWUwYqkA
+searchguard.ssl.transport.pemtrustedcas_filepath: root-ca.pem
+searchguard.ssl.transport.enforce_hostname_verification: false
+searchguard.ssl.transport.resolve_hostname: false
+searchguard.ssl.http.enabled: false
+searchguard.nodes_dn:
+- CN=node.lionstep.com,OU=Ops,O=Example Com\, Inc.,DC=example,DC=com
+searchguard.authcz.admin_dn:
+- CN=pipeline.lionstep.com,OU=Ops,O=Lionstep\, Inc.,DC=lionstep,DC=com

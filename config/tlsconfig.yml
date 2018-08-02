@@ -1,7 +1,22 @@
+defaults:
+  validityDays: 730
+  pkPassword: auto
+  generatedPasswordLength: 12
+
 ca:
   root:
     dn: CN=root.ca.lionstep.com,OU=CA,O=Lionstep\, Inc.,DC=lionstep,DC=com
     keysize: 2048
-    pkPassword: 1qaz@3edc 
     validityDays: 3650
     file: root-ca.pem
+
+nodes:
+  - name: node
+    dn: CN=node.lionstep.com,OU=Ops,O=Example Com\, Inc.,DC=example,DC=com
+
+clients:
+  - name: app_engine
+    dn: CN=app_engine.lionstep.com,OU=Ops,O=Lionstep\, Inc.,DC=lionstep,DC=com
+  - name: pipeline
+    dn: CN=pipeline.lionstep.com,OU=Ops,O=Lionstep\, Inc.,DC=lionstep,DC=com
+    admin: true
