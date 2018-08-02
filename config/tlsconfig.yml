@@ -1,6 +1,6 @@
 defaults:
   validityDays: 730
-  pkPassword: auto
+  pkPassword: none
   generatedPasswordLength: 12
 
 ca:
@@ -12,7 +12,7 @@ ca:
 
 nodes:
   - name: node
-    dn: CN=node.lionstep.com,OU=Ops,O=Example Com\, Inc.,DC=example,DC=com
+    dn: CN=node.lionstep.com,OU=Ops,O=Lionstep\, Inc.,DC=lionstep,DC=com
 
 clients:
   - name: app_engine

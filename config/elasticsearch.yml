@@ -38,12 +38,11 @@ xpack:
 
 searchguard.ssl.transport.pemcert_filepath: node.pem
 searchguard.ssl.transport.pemkey_filepath: node.key
-searchguard.ssl.transport.pemkey_password: gLOupWUwYqkA
 searchguard.ssl.transport.pemtrustedcas_filepath: root-ca.pem
 searchguard.ssl.transport.enforce_hostname_verification: false
 searchguard.ssl.transport.resolve_hostname: false
 searchguard.ssl.http.enabled: false
 searchguard.nodes_dn:
-- CN=node.lionstep.com,OU=Ops,O=Example Com\, Inc.,DC=example,DC=com
+- CN=node.lionstep.com,OU=Ops,O=Lionstep\, Inc.,DC=lionstep,DC=com
 searchguard.authcz.admin_dn:
 - CN=pipeline.lionstep.com,OU=Ops,O=Lionstep\, Inc.,DC=lionstep,DC=com
