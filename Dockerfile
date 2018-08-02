@@ -31,4 +31,4 @@ ADD config/elasticsearch.yml config/elasticsearch.yml
 
 RUN chmod +x plugins/search-guard-6/tools/sgadmin.sh
 
-# RUN plugins/search-guard-6/tools/sgadmin.sh -cd plugins/search-guard-6/sgconfig -icl -key config/pipeline.key -cert config/pipeline.pem -cacert config/root-ca.pem -nhnv
+# RUN plugins/search-guard-6/tools/sgadmin.sh -h 0.0.0.0 -cd plugins/search-guard-6/sgconfig -icl -key config/pipeline.key -cert config/pipeline.pem -cacert config/root-ca.pem -nhnv
