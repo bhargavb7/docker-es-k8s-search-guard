@@ -9,7 +9,9 @@ adding search guard to docker-elasticsearch-kubernetes image
 ./search-guard-tlstool-1.5/tools/sgtlstool.sh -c ./config/tlsconfig.yml -ca -crt
 ```
 
-2. build docker image:
+2. copy `out/node_elasticsearch_config_snippet.yml` into `config/elasticsearch.yml`
+
+3. build docker image:
 
 ```shell
 docker build -t docker-es-k8s-search-guard:latest .
