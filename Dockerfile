@@ -13,6 +13,8 @@ WORKDIR /elasticsearch
 
 RUN bin/elasticsearch-plugin install -b com.floragunn:search-guard-6:6.3.1-22.3
 
+ADD search-guard-tlstool-1.5.tar.gz /search-guard-tlstool
+
 ADD config/elasticsearch.yml config/elasticsearch.yml
 
 # make the script run in alpine
