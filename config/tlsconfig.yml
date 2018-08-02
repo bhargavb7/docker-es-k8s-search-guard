@@ -1,0 +1,7 @@
+ca:
+  root:
+    dn: CN=root.ca.lionstep.com,OU=CA,O=Lionstep\, Inc.,DC=lionstep,DC=com
+    keysize: 2048
+    pkPassword: 1qaz@3edc 
+    validityDays: 3650
+    file: root-ca.pem
