@@ -36,6 +36,7 @@ xpack:
   ml.enabled: false
   security.enabled: false
 
+searchguard.enterprise_modules_enabled: false
 searchguard.ssl.transport.pemcert_filepath: node.pem
 searchguard.ssl.transport.pemkey_filepath: node.key
 searchguard.ssl.transport.pemtrustedcas_filepath: root-ca.pem
