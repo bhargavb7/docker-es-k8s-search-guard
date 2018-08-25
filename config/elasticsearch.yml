@@ -35,6 +35,8 @@ discovery:
 xpack:
   ml.enabled: false
   security.enabled: false
+  
+reindex.remote.whitelist: ${REINDEX_REMOTE_WHITELIST}
 
 searchguard.enterprise_modules_enabled: false
 searchguard.ssl.transport.pemcert_filepath: node.pem
